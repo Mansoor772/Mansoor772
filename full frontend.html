@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>frontend</title>
+</head>
+<style type="text/css">
+	.important{
+ color:blue;
+ background:lightblue;
+ border:3px outset black ;
+
+}
+
+</style>
+<body>
+	<div class="important">
+	<h1>Mathmatics Table</h1>
+	<p>Enter the number </p>
+	<script >
+		function fcall(argument) {
+			n = document.form1.data1.value;
+	var r = 1;
+	var a = 0;
+	for(a = 1; a<10;a++)
+	{ 
+		r = n* a;
+	document.write(""+ n +"x " + a + "= " + r+ "<br>");}
+		}
+	</script>
+	<form name="form1" >
+	<input type = "text" name ="data1">
+
+	<input type="button" onclick="fcall()">
+</form>
+</div>
+</body>
+</html>
