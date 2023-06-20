@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>lab Webpage</title>
+</head>
+<body>
+	<form name="loginform">
+		<h2 >enter loginid</h2>
+		<input type="text" name="loginid" placeholder="Enter Login id">
+		<input type="button" value="click" name="show" onclick="fcal()">
+		<h2>Enter the password</h2>
+		<input type="password" name="psd" placeholder="Enter Password" >
+		<input type="button" name="password" value="confirm" onclick="bcal()" ><br>
+		<h2>enter the email</h2>
+		<input type="text" name="email" placeholder="Enter Email" >
+		<input type="button" name="emailbtn" value="ok" onclick="ecal()">
+		<h2>enter your cnic number</h2>
+		 <input type="text" name="cnic" placeholder="Enter CNIC No">
+		<input type="button" name="cnic" value="check" onclick="acal()">
+
+	
+	</form>
+	<script >
+		function fcal() 
+		{
+			
+			var strID = document.loginform.loginid.value;
+			
+			
+
+			if(strID.length == 0)
+			{
+				alert(" Empty");
+
+			}}
+			function bcal() {
+				var strpass=document.loginform.psd.value;
+				if(strpass.length<8){
+				alert("password is too short");
+
+			}
+			}
+			function ecal() {
+				var instr=document.loginform.email.value;
+				const patrn=/\w+\d+@gmail.\w{3}/;
+				if(patrn.test(instr)){
+					alert("matched");
+
+				}
+				else
+				{
+					alert("invalid entry");
+				}}
+				function acal() {
+
+					var cnic=document.loginform.cnic.value;
+				const patrn=^[0-9+]{5}-[0-9+]{7}-[0-9]{1}$;
+				if(patrn.test(cnic)){
+					alert("cnic number matched");
+				}
+					else{
+						alert("invalid entry");
+				}
+				
+
+
+				
+
+				
+
+			 }
+
+			
+		
+		
+	</script>
+
+</body>
+</html>
